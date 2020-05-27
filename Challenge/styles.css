@@ -1,7 +1,16 @@
 body {
-  width: 100%; }
+  width: 100%;
+  display: flex; }
 
 .screen {
-  width: 50%; }
+  max-width: 50%;
+  display: flex; }
+
+.player {
+  display: flex;
+  width: 70%;
+  flex-direction: column; }
+  .player h1 {
+    font-size: 3vw; }
 
 /*# sourceMappingURL=styles.css.map */
