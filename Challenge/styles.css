@@ -5,13 +5,19 @@
 body {
   width: 100%;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  border-width: 3vw;
+  border-style: dotted dashed solid double;
+  border-color: red;
+  border-radius: 5vw; }
 
 #gametitle {
   width: 100%;
   display: flex;
   background-color: purple;
-  justify-content: center; }
+  justify-content: center;
+  border-bottom: dotted red;
+  border-width: 1vw; }
   #gametitle h1 {
     font-size: 10vw;
     color: white;
@@ -26,6 +32,10 @@ body {
   width: 50%;
   display: flex;
   flex-direction: column; }
+
+.screen.one {
+  border-right: double red;
+  border-width: 1vw; }
 
 .two {
   justify-content: flex-end;
