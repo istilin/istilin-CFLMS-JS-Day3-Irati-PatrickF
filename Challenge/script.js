@@ -14,13 +14,14 @@ function rollDices(screen) {
   let interval = setInterval(function() {
     if (i == 14) {
       clearInterval(interval)
-      document.getElementsByClassName(`points ${screen}`)[0].children[0].innerHTML = `Your result is ${result[0] + result[1] + result[2] + 3}!`
+      document.getElementsByClassName(`points ${screen}`)[0].children[0].innerHTML = "Your result is "
+      document.getElementById(`result${screen}`).innertHTML = `${result[0] + result[1] + result[2] + 3}`
       for (j = 0; j < document.getElementsByClassName("points").length; j++) {
         if (document.getElementsByClassName("points")[j].children[0].innerHTML == "") {
           showWinner = false
         }
         if (showWinner) {
-          if (parseInt(document.getElementById("result1").innertHTML) > parseInt(document.getElementById("result2").innertHTML)) {
+          if (parseInt(document.getElementById("resultone").innertHTML) > parseInt(document.getElementById("resulttwo").innertHTML)) {
             document.getElementsByClassName("winner one")[0].style.display = true
             document.getElementsByClassName("loser one")[0].style.display = false
           } else {
@@ -38,6 +39,4 @@ function rollDices(screen) {
     }
   }, 200)
 }
-
-rollDices("one")
 //alert(result)
