@@ -8,6 +8,9 @@ document.getElementsByClassName("screen two")[0].style.backgroundColor = `rgb(${
 let dices = ["images/dice-1.svg", "images/dice-2.svg", "images/dice-3.svg", "images/dice-4.svg", "images/dice-5.svg", "images/dice-6.svg"]
 let result = []
 
+document.getElementsByClassName("player one")[0].children[0].innerHTML = prompt("Enter the first player's name please")
+document.getElementsByClassName("player two")[0].children[0].innerHTML = prompt("Enter the first player's name please")
+
 function rollDices(screen) {
   let i = 0
   let showWinner = true;
