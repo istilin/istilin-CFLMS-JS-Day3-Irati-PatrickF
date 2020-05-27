@@ -7,8 +7,6 @@ document.getElementsByClassName("screen two")[0].style.backgroundColor = `rgb(${
 
 let dices = ["images/dice-1.svg", "images/dice-2.svg", "images/dice-3.svg", "images/dice-4.svg", "images/dice-5.svg", "images/dice-6.svg"]
 let result = []
-let one = 0
-let two = 0
 
 function rollDices(screen) {
   let i = 0
@@ -16,25 +14,23 @@ function rollDices(screen) {
   let interval = setInterval(function() {
     if (i == 14) {
       clearInterval(interval)
-      document.getElementsByClassName(`points ${screen}`)[0].children[0].innerHTML = `Your result is ${result[0] + result[1] + result[2] + 3}`
-      window[screen] = result[0] + result[1] + result[2] + 3
-      alert(window[screen])
-      for (j = 0; j < document.getElementsByClassName("points").length; j++) {
-        if (document.getElementsByClassName("points")[j].children[0].innerHTML == "") {
+      document.getElementsByClassName(`points ${screen}`)[0].children[0].innerHTML = `Your result is <span class = 'result ${screen}'>${result[0] + result[1] + result[2] + 3}</span>`
+      for (j = 0; j < document.getElementsByClassName("result").length; j++) {
+        if (document.getElementsByClassName("result")[j].innerHTML == "") {
           showWinner = false
         }
-        if (showWinner) {
-          if (one > two) {
-            document.getElementsByClassName("winner one")[0].style.display = "flex"
-            document.getElementsByClassName("loser one")[0].style.display = "none"
-            document.getElementsByClassName("winner two")[0].style.display = "none"
-            document.getElementsByClassName("loser two")[0].style.display = "flex"
-          } else {
-            document.getElementsByClassName("winner one")[0].style.display = "none"
-            document.getElementsByClassName("loser one")[0].style.display = "flex"
-            document.getElementsByClassName("winner two")[0].style.display = "flex"
-            document.getElementsByClassName("loser two")[0].style.display = "none"
-          }
+      }
+      if (showWinner) {
+        if (parseInt(document.getElementsByClassName("result one")[0].innerHTML) > parseInt(document.getElementsByClassName("result two")[0].innerHTML)) {
+          document.getElementsByClassName("winner one")[0].style.display = "flex"
+          document.getElementsByClassName("loser one")[0].style.display = "none"
+          document.getElementsByClassName("winner two")[0].style.display = "none"
+          document.getElementsByClassName("loser two")[0].style.display = "flex"
+        } else {
+          document.getElementsByClassName("winner one")[0].style.display = "none"
+          document.getElementsByClassName("loser one")[0].style.display = "flex"
+          document.getElementsByClassName("winner two")[0].style.display = "flex"
+          document.getElementsByClassName("loser two")[0].style.display = "none"
         }
       }
     } else {
