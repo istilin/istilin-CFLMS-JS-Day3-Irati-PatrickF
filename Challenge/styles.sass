@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Coming+Soon&display=swap')
-
+*
+	box-sizing: border-box
 
 body
 	width: 100%
@@ -42,18 +43,38 @@ body
 		font-family: 'Chelsea Market', cursive
 
 
-.dices
+.dicebut.two
+	flex-direction: row-reverse
+
+.dicebut
 	display: flex
-	width: 40%
+	width: 100%
+	justify-content: space-around
 	padding: 6%
-
-
-	.dice
+	.dices
 		display: flex
-		width: 100%
+		width: 55%
+		padding: 6%
+		justify-content: space-between
+
+		.dice
+			display: flex
+			width: 100%
+			padding: 2%
+
+			img
+				width: 100%
+
+
+
+	.but
+
+		display: flex
+		width: 20%
 		padding: 2%
 		img
 			width: 100%
+
 
 
 

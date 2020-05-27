@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Coming+Soon&display=swap");
+* {
+  box-sizing: border-box; }
+
 body {
   width: 100%;
   display: flex;
@@ -39,15 +42,30 @@ body {
     padding: 0;
     font-family: "Chelsea Market", cursive; }
 
-.dices {
+.dicebut.two {
+  flex-direction: row-reverse; }
+
+.dicebut {
   display: flex;
-  width: 40%;
+  width: 100%;
+  justify-content: space-around;
   padding: 6%; }
-  .dices .dice {
+  .dicebut .dices {
     display: flex;
-    width: 100%;
+    width: 55%;
+    padding: 6%;
+    justify-content: space-between; }
+    .dicebut .dices .dice {
+      display: flex;
+      width: 100%;
+      padding: 2%; }
+      .dicebut .dices .dice img {
+        width: 100%; }
+  .dicebut .but {
+    display: flex;
+    width: 20%;
     padding: 2%; }
-    .dices .dice img {
+    .dicebut .but img {
       width: 100%; }
 
 .points {
