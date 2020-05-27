@@ -1,5 +1,5 @@
-red = Math.floor(Math.random() * 256)
-green = Math.floor(Math.random() * 256)
-blue = Math.floor(Math.random() * 256)
-
-document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`
+function RGBValRdm() {
+  return Math.floor(Math.random() * 256)
+}
+document.getElementsByClassName("screen one")[0].style.backgroundColor = `rgb(${RGBValRdm()}, ${RGBValRdm()}, ${RGBValRdm()})`
+document.getElementsByClassName("screen two")[0].style.backgroundColor = `rgb(${RGBValRdm()}, ${RGBValRdm()}, ${RGBValRdm()})`
