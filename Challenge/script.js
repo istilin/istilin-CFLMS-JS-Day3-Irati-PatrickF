@@ -7,6 +7,8 @@ document.getElementsByClassName("screen two")[0].style.backgroundColor = `rgb(${
 
 let dices = ["images/dice-1.svg", "images/dice-2.svg", "images/dice-3.svg", "images/dice-4.svg", "images/dice-5.svg", "images/dice-6.svg"]
 let result = []
+let one = 0
+let two = 0
 
 function rollDices(screen) {
   let i = 0
@@ -14,19 +16,24 @@ function rollDices(screen) {
   let interval = setInterval(function() {
     if (i == 14) {
       clearInterval(interval)
-      document.getElementsByClassName(`points ${screen}`)[0].children[0].innerHTML = "Your result is "
-      document.getElementById(`result${screen}`).innertHTML = `${result[0] + result[1] + result[2] + 3}`
+      document.getElementsByClassName(`points ${screen}`)[0].children[0].innerHTML = `Your result is ${result[0] + result[1] + result[2] + 3}`
+      window[screen] = result[0] + result[1] + result[2] + 3
+      alert(window[screen])
       for (j = 0; j < document.getElementsByClassName("points").length; j++) {
         if (document.getElementsByClassName("points")[j].children[0].innerHTML == "") {
           showWinner = false
         }
         if (showWinner) {
-          if (parseInt(document.getElementById("resultone").innertHTML) > parseInt(document.getElementById("resulttwo").innertHTML)) {
-            document.getElementsByClassName("winner one")[0].style.display = true
-            document.getElementsByClassName("loser one")[0].style.display = false
+          if (one > two) {
+            document.getElementsByClassName("winner one")[0].style.display = "flex"
+            document.getElementsByClassName("loser one")[0].style.display = "none"
+            document.getElementsByClassName("winner two")[0].style.display = "none"
+            document.getElementsByClassName("loser two")[0].style.display = "flex"
           } else {
-            document.getElementsByClassName("winner two")[0].style.display = true
-            document.getElementsByClassName("loser two")[0].style.display = false
+            document.getElementsByClassName("winner one")[0].style.display = "none"
+            document.getElementsByClassName("loser one")[0].style.display = "flex"
+            document.getElementsByClassName("winner two")[0].style.display = "flex"
+            document.getElementsByClassName("loser two")[0].style.display = "none"
           }
         }
       }

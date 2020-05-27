@@ -3,7 +3,7 @@
 <head>
 	<title>Challenge</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
-	
+
 </head>
 <body>
 
@@ -11,7 +11,7 @@
 	<h1>
 		Roll the dice!
 	</h1>
-	
+
 </div>
 
 <div id = screens>
@@ -33,13 +33,13 @@
 					<img src="images/dice-1.svg" alt="">
 				</div>
 			</div>
-			<div class = "but one">
+			<div class = "but one" onclick="rollDices('one')">
 				<img src="images/play-button.svg" alt="">
 			</div>
 		</div>
 		<div class = "points one">
 			<h2>
-				Result is bla <span id = "resultone"></span>
+				<span class = "result one"></span>
 			</h2>
 		</div>
 
@@ -75,14 +75,14 @@
 					<img src="images/dice-1.svg" alt="">
 				</div>
 			</div>
-			<div class = "but two">
+			<div class = "but two" onclick="rollDices('two')">
 				<img src="images/play-button.svg" alt="">
 			</div>
 		</div>
 
 		<div class = "points two">
 			<h2>
-				Result is bla <span id = "resulttwo"></span>
+				<span id = "resulttwo"></span>
 			</h2>
 		</div>
 		<div class = "winner two">

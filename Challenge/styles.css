@@ -88,7 +88,7 @@ body {
     font-family: "Chelsea Market", cursive; }
 
 .winner {
-  display: flex;
+  display: none;
   padding: 6%;
   justify-content: center; }
   .winner h1 {
@@ -99,7 +99,7 @@ body {
     font-family: "Chelsea Market", cursive; }
 
 .loser {
-  display: flex;
+  display: none;
   padding: 6%;
   justify-content: center; }
   .loser h1 {
